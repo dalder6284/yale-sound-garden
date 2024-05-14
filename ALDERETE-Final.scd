@@ -205,7 +205,7 @@ activator = {
 ~o = OSCFunc(activator, '/coords');
 )
 
-
+// Free OSC Func and location synths
 (
 ~o.free;
 ~locations.do({arg loc; if(loc.at("active") == true, {loc.at("playing").release; loc.put("active", false);}, {})});
